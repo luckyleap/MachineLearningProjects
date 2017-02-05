@@ -1,4 +1,18 @@
 import random
+import numpy
+
+
+def flatten3Dto2D(data):
+	d = numpy.array(data)
+	ans = d.reshape(-1, 3)
+	return ans
+
+
+def flatten2Dto3D(data, shape):
+	d = numpy.array(data)
+	ans = d.reshape(shape[0], shape[1], 3)
+	return ans
+
 
 
 def shuffle(array, ans):

@@ -1,5 +1,6 @@
 from sklearn import svm
 import data_preprocess
+import matplotlib.pyplot as plt
 
 # Load dataset
 data = []
@@ -48,3 +49,27 @@ test_error = clf.score(testData, testAns)
 generalization_error = train_error - test_error
 print(generalization_error)
 
+# Exeperiment with several different training data size
+percentA = []
+train_accuracy = []
+test_accuracy = []
+
+for index in range(1, 50):
+	percent = index * .02
+	[trainDataN, nullData] = data_preprocess.split_data(trainData, percent)
+	[trainAnsN, nullData] = data_preprocess.split_data(trainAns, percent)
+	clf = svm.SVC(C=param_value)
+	clf.fit(trainDataN, trainAnsN)
+	train_accuracy.append(clf.score(trainDataN, trainAnsN))
+	test_accuracy.append(clf.score(testData, testAns))
+	percentA.append(percent)
+
+train_error = plt.plot(percentA, train_accuracy, label='Train Error')
+test_error = plt.plot(percentA, test_accuracy, label='Test Error')
+plt.legend(bbox_to_anchor=(.9, .25))
+
+plt.ylabel('Percent Errors')
+plt.xlabel('Percent of Training Data Size')
+plt.grid(True)
+plt.title('Training and Testing Errors vs Size of Training Data ')
+plt.show()
