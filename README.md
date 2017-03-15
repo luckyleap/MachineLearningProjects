@@ -11,3 +11,8 @@ Short scripts of projects that I am currently working on in the graduate machine
 
 3. Linear Regression
 	* Linear regression using least-squares error on [Wine Quality Dataset](http://archive.ics.uci.edu/ml/datasets/Wine+Quality)
+
+## Project 3 
+1. Simple Neural Network
+	* Implement a simple neural network with only a single hidden layer
+	* 
