@@ -1,0 +1,57 @@
+Problem 1:
+Use machine learning to classify different faces for identification of a person
+
+Features:
+Histogram of gradients for the frontal face, edge features of a the person's eyes, line features of a person
+
+Labels:
+Target label - A person's id, given the person's face
+
+Collect Data:
+To collect the data, I can take pictures of 100 volunteers' faces. Then, I can run the face images for feature extraction on the edges, and HoGs.
+
+Challenges:
+The person's facial image might have different lighting that distorts the features. If the person wears glasses and has no glasses in the test, the person might be incorrectly labelled.
+
+
+
+
+Problem 2:
+Use machine learning to predict the right ratio of ingredients for a smoothie restaurant for customers
+
+Features:
+Customers rate each smoothie from a 1-10 preference scale, with 10 being the best.
+The type of ingredient in a smoothie
+The amount of ingredients in a smoothie
+The time of the day
+The type of customers
+
+Labels:
+Target label - The rating of the smoothie
+
+Collect Data:
+To collect data, I can survey each customer after the customer has tasted the smoothie, recording the time, the customer data, and rating of the smoothie.
+
+Challenges:
+There is a limited number of smoothies of each kind of ingredient. This will create a small amount of data for each type of label.
+
+
+
+Problem 3:
+Use machine learning to play Super Mario
+
+Features:
+Position of mario
+Position of enemies
+Mario's current 'action'
+Time
+Mario's possible 'next action'
+
+Labels:
+Target Label- Mario's next move
+
+Collect Data:
+Run Mario through several thousand trials, updating the best possible next movie with each trial
+
+Challenges:
+Mario has to get the next move at a fast enough pace otherwise the state of the game will be in a different state for the 'next move'

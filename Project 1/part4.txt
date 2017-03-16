@@ -1,0 +1,7 @@
+1. Least Squares Solution L2 Error:  19.0883688833
+2. Gradient Descent Solution L2 Error:  20.54346988
+
+Observations:
+As the learning rate increases, the convergence happens faster. However, it becomes really easy to have the error go shoot up to infinity when the learning rate is too high (> 0.01)
+
+If the learning rate is small, the convergence takes very long.

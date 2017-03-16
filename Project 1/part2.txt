@@ -1,0 +1,32 @@
+4.	Package:
+
+	scikit-learn svm.SVC
+
+	This package was selected because of the programming environment I was on. The scikit-learn hosts a number of machine learning libraries for python. Specifically, svc was selected because it is the default SVM classifier package and hosts a number of options for polynomial and linear classifications. As well, it is a classifier and not a regression package since the goal of this task is to classify between labels.
+
+	Documentation:
+	class sklearn.svm.SVC(C=1.0, kernel='rbf', degree=3, gamma='auto', coef0=0.0, shrinking=True, probability=False, tol=0.001, cache_size=200, class_weight=None, verbose=False, max_iter=-1, decision_function_shape=None, random_state=None)[source]¶
+
+	Example code for usage and training
+
+	>>> from sklearn.svm import SVC
+	>>> clf = SVC()
+	>>> clf.fit(X, y)
+	SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
+	    decision_function_shape=None, degree=3, gamma='auto', kernel='rbf',
+	    max_iter=-1, probability=False, random_state=None, shrinking=True,
+	    tol=0.001, verbose=False)
+	>>> print(clf.predict([[-0.8, -1]]))
+
+5.	Parameter selection on C:
+	Best Parameter Value Selected for 'C' is 1
+
+6.	Training and Testing Error on Parameter Selection
+
+	Train Accuracy:  0.988888888889
+	Test Accuracy:  1.0
+	Generalization Accuracy -0.0111111111111
+
+7.	Observations:
+	As the data size increases, the train accuracy goes down while the test accuracy goes up. Training accuracy goes down because it becomes harder and harder to overfit as the data grows. The test accuracy goes up because we learn a better classifier.
+
