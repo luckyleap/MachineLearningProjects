@@ -3,6 +3,14 @@ import numpy
 from sklearn import preprocessing
 
 
+# Return the mean squared error
+def MSE(y_pred, y):
+	sample_size = y.shape[0]
+	print sample_size, numpy.sum(numpy.square(numpy.subtract(y_pred, y)))
+	mse = (1. / sample_size) * numpy.sum(numpy.square(numpy.subtract(y_pred, y)))
+	return mse
+
+
 def reshapeCol(x):
 	return numpy.reshape(x, (numpy.shape(x)[0], 1))
 
@@ -115,9 +123,9 @@ def cleanArray(array):
 	return ans
 
 
-def split_data(data, percent):
+def split_data(data, train_percent):
 	length = len(data)
-	train_l = int(round(length * percent))
+	train_l = int(round(length * train_percent))
 
 	train = data[0:train_l]
 	test = data[train_l:]
