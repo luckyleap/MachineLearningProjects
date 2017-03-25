@@ -6,8 +6,10 @@ from sklearn import preprocessing
 def reshapeCol(x):
 	return numpy.reshape(x, (numpy.shape(x)[0], 1))
 
+
 def reshapeRow(x):
 	return numpy.reshape(x, (1, numpy.shape(x)[0]))
+
 
 # Given a txt file of float values, return as numpy array
 def getNumpyArrayFromFile(fileStr):
